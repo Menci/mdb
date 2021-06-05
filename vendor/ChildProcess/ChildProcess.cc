@@ -26,7 +26,6 @@ ChildProcess::ChildProcess(const std::string &command, const std::vector<std::st
     for (size_t i = 0; i < arguments.size(); i++) argv[i + 1] = arguments[i].c_str();
     argv.back() = nullptr;
     
-    pid_t pid;
     ENSURE_ZERO_ERRNO(posix_spawnp(&pid, command.c_str(), &actions, nullptr, const_cast<char *const *>(argv.data()), nullptr));
 
     posix_spawn_file_actions_destroy(&actions);
