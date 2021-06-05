@@ -11,6 +11,7 @@ Only works with single-threaded static-linked programs.
 * CMake (>= 3.0)
 * GNU Readline
 * GNU Source-highlight
+* GNU Binutils
 * Zydis
 
 
